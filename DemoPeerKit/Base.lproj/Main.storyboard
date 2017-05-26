@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UVz-Ia-KGM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="n1e-mg-3AS">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Cqm-hN-SAR" customClass="ViewController" customModule="DemoPeerKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cch-6x-R1O"/>
+                        <viewControllerLayoutGuide type="bottom" id="kt1-fB-UYv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJh-Rr-Dsy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuL-Gk-Aax" customClass="ImageScrollView" customModule="DemoPeerKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mLv-gz-rrY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1hY-ok-5QJ">
+                                    <size key="itemSize" width="411" height="654"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="Q5M-24-43d" customClass="CustomCell" customModule="DemoPeerKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="83" width="320" height="502"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="502"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-OB-oah" customClass="ImageScrollView" customModule="DemoPeerKit" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="318" height="501"/>
+                                                </scrollView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bjm-OB-oah" secondAttribute="trailing" constant="2" id="7GI-JC-fYz"/>
+                                            <constraint firstItem="bjm-OB-oah" firstAttribute="leading" secondItem="Q5M-24-43d" secondAttribute="leading" id="d7h-Iw-Hxu"/>
+                                            <constraint firstItem="bjm-OB-oah" firstAttribute="top" secondItem="Q5M-24-43d" secondAttribute="top" id="dww-Gr-D2Z"/>
+                                            <constraint firstAttribute="bottom" secondItem="bjm-OB-oah" secondAttribute="bottom" constant="1" id="h2a-ng-nBP"/>
+                                        </constraints>
+                                        <size key="customSize" width="320" height="502"/>
+                                        <connections>
+                                            <outlet property="scrlView" destination="bjm-OB-oah" id="ouT-qM-hdE"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Cqm-hN-SAR" id="v3i-uH-dJ6"/>
+                                    <outlet property="delegate" destination="Cqm-hN-SAR" id="ruX-6D-pcH"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vuL-Gk-Aax" secondAttribute="trailing" id="52Y-qE-iUh"/>
+                            <constraint firstItem="vuL-Gk-Aax" firstAttribute="top" secondItem="Cch-6x-R1O" secondAttribute="bottom" constant="-64" id="Ih8-03-jCX"/>
+                            <constraint firstItem="vuL-Gk-Aax" firstAttribute="centerX" secondItem="fJh-Rr-Dsy" secondAttribute="centerX" id="Jfh-nZ-Acm"/>
+                            <constraint firstItem="Cch-6x-R1O" firstAttribute="bottom" secondItem="mLv-gz-rrY" secondAttribute="top" constant="64" id="OSB-tO-bZT"/>
+                            <constraint firstItem="kt1-fB-UYv" firstAttribute="top" secondItem="vuL-Gk-Aax" secondAttribute="bottom" id="PTS-PL-VxH"/>
+                            <constraint firstItem="kt1-fB-UYv" firstAttribute="top" secondItem="mLv-gz-rrY" secondAttribute="bottom" id="SIz-xg-ffW"/>
+                            <constraint firstAttribute="trailing" secondItem="mLv-gz-rrY" secondAttribute="trailing" id="T6k-fP-cKX"/>
+                            <constraint firstItem="vuL-Gk-Aax" firstAttribute="leading" secondItem="fJh-Rr-Dsy" secondAttribute="leading" id="cgt-if-Kkl"/>
+                            <constraint firstItem="vuL-Gk-Aax" firstAttribute="top" secondItem="fJh-Rr-Dsy" secondAttribute="top" id="i1Q-Rr-emg"/>
+                            <constraint firstItem="mLv-gz-rrY" firstAttribute="leading" secondItem="fJh-Rr-Dsy" secondAttribute="leading" id="lo0-4k-hC1"/>
+                            <constraint firstItem="mLv-gz-rrY" firstAttribute="centerX" secondItem="fJh-Rr-Dsy" secondAttribute="centerX" id="ng2-38-lo7"/>
+                            <constraint firstItem="mLv-gz-rrY" firstAttribute="centerY" secondItem="fJh-Rr-Dsy" secondAttribute="centerY" id="oOT-TJ-PcU"/>
+                            <constraint firstItem="vuL-Gk-Aax" firstAttribute="centerY" secondItem="fJh-Rr-Dsy" secondAttribute="centerY" id="tBj-ig-sbG"/>
+                            <constraint firstItem="mLv-gz-rrY" firstAttribute="top" secondItem="fJh-Rr-Dsy" secondAttribute="top" id="toa-Hg-ePU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ih8-03-jCX"/>
+                                <exclude reference="OSB-tO-bZT"/>
+                                <exclude reference="SIz-xg-ffW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="uBc-4l-yYe"/>
+                    <connections>
+                        <outlet property="previewView" destination="mLv-gz-rrY" id="ZNY-mu-peq"/>
+                        <outlet property="scrlView" destination="vuL-Gk-Aax" id="WnZ-5a-JwG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGZ-Gw-Hm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2941.5999999999999" y="-19.340329835082461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OIn-tj-AuM">
+            <objects>
+                <navigationController id="UVz-Ia-KGM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oy7-r7-dYo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cqm-hN-SAR" kind="relationship" relationship="rootViewController" id="hyq-1E-yH5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYI-QS-1UU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2213.5999999999999" y="-16.641679160419791"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EA147093FB4C589AFED53267E13D8DA60859AB32" : 9223372036854775807,
+    "9A64317953518213A59F0416BCEF6EF2D02BD22B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "729BBA07-6D0B-407E-AF8D-D6DC17BC89DB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EA147093FB4C589AFED53267E13D8DA60859AB32" : "",
+    "9A64317953518213A59F0416BCEF6EF2D02BD22B" : "ios_peerkit\/PeerKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DemoPeerKit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DemoPeerKit.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jpsim\/PeerKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A64317953518213A59F0416BCEF6EF2D02BD22B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/akshay.savaliya@192.168.0.254\/ios_peerkit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA147093FB4C589AFED53267E13D8DA60859AB32"
+    }
+  ]
+}

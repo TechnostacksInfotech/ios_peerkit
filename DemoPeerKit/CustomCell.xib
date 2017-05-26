@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="ivq-0x-zAW">
+            <rect key="frame" x="0.0" y="0.0" width="248" height="325"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="248" height="325"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6m-Db-A0o" customClass="ImageScrollView" customModule="DemoPeerKit" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="5" width="248" height="315"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-af-f4G">
+                                <rect key="frame" x="0.0" y="0.0" width="248" height="315"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gYT-af-f4G" firstAttribute="centerY" secondItem="k6m-Db-A0o" secondAttribute="centerY" id="9ML-zM-2H5"/>
+                            <constraint firstItem="gYT-af-f4G" firstAttribute="centerX" secondItem="k6m-Db-A0o" secondAttribute="centerX" id="ILF-K4-0vi"/>
+                            <constraint firstItem="gYT-af-f4G" firstAttribute="leading" secondItem="k6m-Db-A0o" secondAttribute="leading" id="JEt-bC-djL"/>
+                            <constraint firstAttribute="bottom" secondItem="gYT-af-f4G" secondAttribute="bottom" id="UHd-77-SNq"/>
+                            <constraint firstAttribute="trailing" secondItem="gYT-af-f4G" secondAttribute="trailing" id="VQD-47-Hct"/>
+                            <constraint firstItem="gYT-af-f4G" firstAttribute="top" secondItem="k6m-Db-A0o" secondAttribute="top" id="fVe-Bs-tuO"/>
+                        </constraints>
+                    </scrollView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="k6m-Db-A0o" secondAttribute="trailing" id="JNU-xW-OAy"/>
+                <constraint firstAttribute="bottom" secondItem="k6m-Db-A0o" secondAttribute="bottom" constant="5" id="RgG-NW-RSg"/>
+                <constraint firstItem="k6m-Db-A0o" firstAttribute="leading" secondItem="ivq-0x-zAW" secondAttribute="leading" id="cDw-Fa-AMA"/>
+                <constraint firstItem="k6m-Db-A0o" firstAttribute="top" secondItem="ivq-0x-zAW" secondAttribute="top" constant="5" id="xZm-Vp-lmE"/>
+            </constraints>
+            <size key="customSize" width="248" height="325"/>
+            <point key="canvasLocation" x="36" y="-28"/>
+        </collectionViewCell>
+    </objects>
+</document>
